@@ -1,0 +1,15 @@
+/Users/franz/Desktop/c#course/bin/Debug/net6.0/c#course
+/Users/franz/Desktop/c#course/bin/Debug/net6.0/c#course.deps.json
+/Users/franz/Desktop/c#course/bin/Debug/net6.0/c#course.runtimeconfig.json
+/Users/franz/Desktop/c#course/bin/Debug/net6.0/c#course.dll
+/Users/franz/Desktop/c#course/bin/Debug/net6.0/c#course.pdb
+/Users/franz/Desktop/c#course/obj/Debug/net6.0/c#course.csproj.AssemblyReference.cache
+/Users/franz/Desktop/c#course/obj/Debug/net6.0/c#course.GeneratedMSBuildEditorConfig.editorconfig
+/Users/franz/Desktop/c#course/obj/Debug/net6.0/c#course.AssemblyInfoInputs.cache
+/Users/franz/Desktop/c#course/obj/Debug/net6.0/c#course.AssemblyInfo.cs
+/Users/franz/Desktop/c#course/obj/Debug/net6.0/c#course.csproj.CoreCompileInputs.cache
+/Users/franz/Desktop/c#course/obj/Debug/net6.0/c#course.dll
+/Users/franz/Desktop/c#course/obj/Debug/net6.0/refint/c#course.dll
+/Users/franz/Desktop/c#course/obj/Debug/net6.0/c#course.pdb
+/Users/franz/Desktop/c#course/obj/Debug/net6.0/c#course.genruntimeconfig.cache
+/Users/franz/Desktop/c#course/obj/Debug/net6.0/ref/c#course.dll

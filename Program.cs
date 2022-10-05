@@ -17,6 +17,15 @@ else if (number3>number1&&number3>number2) Console.WriteLine("max ="+number3);
 */
 
 //является ли число четным
+/*
 int number1 = int.Parse(Console.ReadLine());
 if (number1 % 2==0) Console.WriteLine("Число четное");
 else Console.WriteLine("Число нечетное");
+*/
+
+//все четные от 1 до N
+int n = int.Parse(Console.ReadLine());
+int m = 2;
+while (m < n){ Console.WriteLine(m);
+m+=2;
+}   

@@ -23,9 +23,14 @@ if (number1 % 2==0) Console.WriteLine("Число четное");
 else Console.WriteLine("Число нечетное");
 */
 
+/*
 //все четные от 1 до N
 int n = int.Parse(Console.ReadLine());
 int m = 2;
 while (m < n){ Console.WriteLine(m);
 m+=2;
-}   
+*/
+
+int num = new Random().Next (100,999);
+Console.WriteLine(num);
+Console.WriteLine($"Вторая цифра числа {num%100/10}");

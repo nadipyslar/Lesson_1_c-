@@ -37,3 +37,11 @@ int num = new Random().Next (100,999);
 Console.WriteLine(num);
 Console.WriteLine($"Вторая цифра числа {num%100/10}");
 */
+
+
+//третья цифра числа или "3ей цифры нет"
+Console.WriteLine("Введите число");
+int number1 = int.Parse(Console.ReadLine());
+string number1text=Convert.ToString(number1);
+if (number1text.Length>2) Console.WriteLine ("третья цифра "+number1text[2]);
+else Console.WriteLine("третьей цифры нет");

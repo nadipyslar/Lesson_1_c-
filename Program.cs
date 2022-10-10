@@ -31,6 +31,9 @@ while (m < n){ Console.WriteLine(m);
 m+=2;
 */
 
+/*
+//вторая цифра трехзначного числа
 int num = new Random().Next (100,999);
 Console.WriteLine(num);
 Console.WriteLine($"Вторая цифра числа {num%100/10}");
+*/

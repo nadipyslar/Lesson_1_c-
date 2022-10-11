@@ -40,8 +40,26 @@ Console.WriteLine($"Вторая цифра числа {num%100/10}");
 
 
 //третья цифра числа или "3ей цифры нет"
+/*
 Console.WriteLine("Введите число");
 int number1 = int.Parse(Console.ReadLine());
-string number1text=Convert.ToString(number1);
-if (number1text.Length>2) Console.WriteLine ("третья цифра "+number1text[2]);
+string n=Convert.ToString(number1); 
+if (n.Length>2) Console.WriteLine ("третья цифра "+n[2]);
 else Console.WriteLine("третьей цифры нет");
+*/
+
+
+
+
+//проверка цифры на выходной
+
+Console.WriteLine("Введите число");
+int n = int.Parse(Console.ReadLine());
+void Weekend (int n)
+{
+    if (n ==6 | n == 7) Console.WriteLine("Это выходной");
+    else Console.WriteLine("Это не выходной");
+}
+Weekend (n);
+
+ 

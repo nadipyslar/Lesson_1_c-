@@ -72,7 +72,7 @@ IndexChetvert (n);
 */
 
 //Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
-
+/*
 Console.WriteLine("Введите пятизначное число");
 string n = Console.ReadLine();
 void CheckPalindrom (string n)
@@ -80,4 +80,20 @@ void CheckPalindrom (string n)
 else Console.WriteLine("Это не палиндром"); }
 
 CheckPalindrom (n);
- 
+*/
+
+//Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+
+int x1 = int.Parse(Console.ReadLine());
+int y1 = int.Parse(Console.ReadLine());
+int z1 = int.Parse(Console.ReadLine());
+int x2 = int.Parse(Console.ReadLine());
+int y2 = int.Parse(Console.ReadLine());
+int z2 = int.Parse(Console.ReadLine());
+
+int x = x2 - x1;
+int y = y2 - y1;
+int z = z2 - z1;
+
+double length = Math.Sqrt(x*x+y*y+z*z);
+Console.WriteLine(length);

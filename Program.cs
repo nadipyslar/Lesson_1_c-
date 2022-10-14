@@ -84,7 +84,7 @@ CheckPalindrom (n);
 
 //Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
 
-int x1 = int.Parse(Console.ReadLine());
+/*int x1 = int.Parse(Console.ReadLine());
 int y1 = int.Parse(Console.ReadLine());
 int z1 = int.Parse(Console.ReadLine());
 int x2 = int.Parse(Console.ReadLine());
@@ -97,3 +97,14 @@ int z = z2 - z1;
 
 double length = Math.Sqrt(x*x+y*y+z*z);
 Console.WriteLine(length);
+*/
+
+//Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N
+
+Console.WriteLine("Введите число");
+int N = int.Parse(Console.ReadLine());
+void Cube (int N){
+    for (int i=1; i<N;i++)
+Console.WriteLine(i*i*i);
+}
+Cube (N);

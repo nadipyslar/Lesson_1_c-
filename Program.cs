@@ -53,7 +53,7 @@ else Console.WriteLine("третьей цифры нет");
 
 //проверка цифры на выходной
 
-Console.WriteLine("Введите число");
+/*Console.WriteLine("Введите число");
 int n = int.Parse(Console.ReadLine());
 void Weekend (int n)
 {
@@ -61,5 +61,23 @@ void Weekend (int n)
     else Console.WriteLine("Это не выходной");
 }
 Weekend (n);
+*/
+/*
+void IndexChetvert(int n){
+    if (n==1) Console.WriteLine("x>0y>0");
+else Console.WriteLine("www");
+}
+int n = int.Parse(Console.ReadLine());
+IndexChetvert (n);
+*/
 
+//Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+
+Console.WriteLine("Введите пятизначное число");
+string n = Console.ReadLine();
+void CheckPalindrom (string n)
+{if (n [4] == n [0] && n [1] == n[3]) Console.WriteLine("Это палиндром");
+else Console.WriteLine("Это не палиндром"); }
+
+CheckPalindrom (n);
  

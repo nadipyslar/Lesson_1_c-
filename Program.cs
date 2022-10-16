@@ -101,10 +101,20 @@ Console.WriteLine(length);
 
 //Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N
 
-Console.WriteLine("Введите число");
+/*Console.WriteLine("Введите число");
 int N = int.Parse(Console.ReadLine());
 void Cube (int N){
     for (int i=1; i<N;i++)
 Console.WriteLine(i*i*i);
 }
 Cube (N);
+*/
+
+//Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B. 
+//Сделать в функции, сделать проверку на отрицательность.
+
+int a = int.Parse(Console.ReadLine());
+int b = int.Parse(Console.ReadLine());
+int c = Math.Abs(b);
+Console.WriteLine(Math.Pow(a,c));
+

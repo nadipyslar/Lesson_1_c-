@@ -113,8 +113,22 @@ Cube (N);
 //Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B. 
 //Сделать в функции, сделать проверку на отрицательность.
 
+/*
 int a = int.Parse(Console.ReadLine());
 int b = int.Parse(Console.ReadLine());
 int c = Math.Abs(b);
 Console.WriteLine(Math.Pow(a,c));
+*/
+ 
+//Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе
+int a = int.Parse(Console.ReadLine());
+int sum = 0;
+int count = Convert.ToString(a).Length;
+int tempr = 0;
+for (int i=0; i<count; i++){
+    tempr = a-a%10;
+    sum = sum + (a - tempr);
+    a = a/10;
+}
+Console.WriteLine(sum);
 

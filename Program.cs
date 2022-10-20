@@ -167,7 +167,8 @@ void PrintArray(int[] coll){
 
 PrintArray(random2);  
 */
-
+//Задайте массив заполненный случайными положительными трёхзначными числами. 
+//Напишите программу, которая покажет количество чётных чисел в массиве.
 /*int lenArray = 5;
 int [] randomArray = new int [lenArray];
 for (int i=0; i<randomArray.Length; i++)
@@ -184,7 +185,9 @@ int c = 0;
 } 
 Count(randomArray);
 */
-int lenArray = 5;
+
+//Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+/*int lenArray = 5;
 int [] randomArray = new int [lenArray];
 for (int i=0; i<randomArray.Length; i++)
 {
@@ -198,3 +201,24 @@ int sum = 0;
    Console.WriteLine(sum+" ");
 } 
 sumOfOdd(randomArray);
+*/
+//Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+int lenArray = 5;
+double [] randomArray = new double [lenArray];
+for (int i=0; i<randomArray.Length; i++)
+{
+    randomArray[i]=new Random().Next(10,999);
+    Console.Write(randomArray[i]+" ");
+}
+Console.WriteLine("");
+void DiffMaxMin (double [] arr){
+    double max = arr[0];
+    double min = arr[0];
+    double DiffMaxMin = 0;
+    for (int i=0; i<arr.Length; i++)
+        if (arr[i]>max) max = arr[i];
+        else if (arr[i]<min) min =arr[i];
+    DiffMaxMin = max - min;
+    Console.WriteLine(DiffMaxMin);
+}
+DiffMaxMin(randomArray);

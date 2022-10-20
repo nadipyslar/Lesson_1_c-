@@ -137,7 +137,7 @@ Console.WriteLine(sum);
 //Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран. 
 //Элементы задаются рандомно (диапазон выбрать самостоятельно) Итоговый массив должен содержать в себе суммы цифр числа. 
 //Т.е. необходимо подсчитывать суммы цифр каждого числа и записывать их в новый массив.
-
+/*
 int lenArray = 8;
 int [] randomArray = new int [lenArray];
 for (int i=0; i<randomArray.Length; i++)
@@ -145,9 +145,9 @@ for (int i=0; i<randomArray.Length; i++)
     randomArray[i]=new Random().Next(10,99);
     Console.Write(randomArray[i]+" ");
 }
-
+*/
 //string [] NewMass = Array.ConvertAll(randomArray,i=>i.ToString());
-int lenArray2 = 8;
+/*int lenArray2 = 8;
 int [] random2=new int [lenArray2];
 for (int i=0; i<random2.Length;i++) random2[i]=(randomArray[i]/10+randomArray[i]%10);
 
@@ -166,5 +166,21 @@ void PrintArray(int[] coll){
 } 
 
 PrintArray(random2);  
+*/
 
+int lenArray = 5;
+int [] randomArray = new int [lenArray];
+for (int i=0; i<randomArray.Length; i++)
+{
+    randomArray[i]=new Random().Next(100,999);
+    Console.Write(randomArray[i]+" ");
+}
+void Count (int [] arr){
+int c = 0;
+    for (int i=0; i<arr.Length; i++)
+    if (arr[i]%2==0) 
+    c++;
+   Console.WriteLine(c+" ");
+} 
+Count(randomArray);
 

@@ -168,7 +168,7 @@ void PrintArray(int[] coll){
 PrintArray(random2);  
 */
 
-int lenArray = 5;
+/*int lenArray = 5;
 int [] randomArray = new int [lenArray];
 for (int i=0; i<randomArray.Length; i++)
 {
@@ -183,4 +183,18 @@ int c = 0;
    Console.WriteLine(c+" ");
 } 
 Count(randomArray);
-
+*/
+int lenArray = 5;
+int [] randomArray = new int [lenArray];
+for (int i=0; i<randomArray.Length; i++)
+{
+    randomArray[i]=new Random().Next(10,999);
+    Console.Write(randomArray[i]+" ");
+}
+void sumOfOdd (int [] arr){
+int sum = 0;
+    for (int i=0; i<arr.Length; i=i+2)
+    sum=sum+arr[i]; 
+   Console.WriteLine(sum+" ");
+} 
+sumOfOdd(randomArray);

@@ -237,6 +237,7 @@ Console.WriteLine($"Кол-во элементов > 0: {count}");
 */
 //Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; 
 //значения b1, k1, b2 и k2 задаются пользователем.
+/*
 Console.WriteLine("введите значение b1");
 double b1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("введите число k1");
@@ -250,4 +251,31 @@ double numberX = (b2 - b1)/(k1 - k2);
 double numberY = k2 * numberX + b2;
 
 Console.WriteLine($"Точка пересечения двух прямых: {numberX},{numberY}");
+*/
+ //Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
+//m = 3, n = 4.
+//0,5 7 -2 -0,2
+//1 -3,3 8 -9,9
+//8 7,8 -7,1 9
+Console.WriteLine("введите количество строк массива");
+int rows = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("введите количество столбцов массива");
+int columns = Convert.ToInt32(Console.ReadLine());
+double [,] RandomNumbers = new double [rows, columns];
+FillArray(RandomNumbers);
+PrintArray(RandomNumbers);
 
+void FillArray(double[,] array){
+    for (int i = 0; i<array.GetLength(0); i++)
+        for (int j = 0; j<array.GetLength(1); j++)
+            array[i,j] = Convert.ToDouble(new Random().Next(-100, 100)) / 10;
+}
+void PrintArray(double [,]array){
+    for (int i = 0; i < array.GetLength(0); i++){
+    Console.Write("[ ");
+        for (int j = 0; j < array.GetLength(1); j++)
+        Console.Write(array[i, j] + " ");
+        Console.Write("]");
+        Console.WriteLine("");
+    }
+}

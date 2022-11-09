@@ -282,7 +282,7 @@ void PrintArray(double [,]array){
 */
 //Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента
 //или же указание, что такого элемента нет.
-
+/*
 Console.WriteLine("введите номер строки");
 int n = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("введите номер столбца");
@@ -308,5 +308,39 @@ void PrintArray(int[,] array){
            
         Console.Write("]");
         Console.WriteLine(""); 
+    }
+}
+*/
+//Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце
+Console.WriteLine("введите количество строк массива");
+int rows = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("введите количество столбцов массива");
+int columns = Convert.ToInt32(Console.ReadLine());
+int [,] RandomNumbers = new int [rows, columns];
+FillArray(RandomNumbers);
+PrintArray(RandomNumbers);
+
+void FillArray(int[,] array){
+    for (int i = 0; i<array.GetLength(0); i++)
+        for (int j = 0; j<array.GetLength(1); j++)
+            array[i,j] = Convert.ToInt32(new Random().Next(-100, 100)) / 10;
+}
+
+for (int j = 0; j < RandomNumbers.GetLength(1); j++){
+    double avarage = 0;
+    for (int i = 0; i < RandomNumbers.GetLength(0); i++)
+        avarage = (avarage + RandomNumbers[i, j]);
+        avarage = avarage / rows;
+    Console.Write(avarage + "; ");
+}
+Console.WriteLine();
+
+void PrintArray(int [,]array){
+    for (int i = 0; i < array.GetLength(0); i++){
+    Console.Write("[ ");
+        for (int j = 0; j < array.GetLength(1); j++)
+        Console.Write(array[i, j] + " ");
+        Console.Write("]");
+        Console.WriteLine("");
     }
 }

@@ -348,6 +348,7 @@ void PrintArray(int [,]array){
 */
 
 //Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива
+/*
 Console.WriteLine("введите количество строк массива");
 int rows = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("введите количество столбцов массива");
@@ -391,4 +392,53 @@ void OrderArrayLines(int[,] array)
       }
     }
 
+*/
 
+//Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов
+Console.WriteLine("введите количество строк массива");
+int rows = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("введите количество столбцов массива");
+int columns = Convert.ToInt32(Console.ReadLine());
+int[,] array = new int[rows, columns];
+FillArray(array);
+PrintArray(array);
+int minSumLine = 0;
+int sumLine = SumLineElements(array, 0);
+for (int i = 1; i < array.GetLength(0); i++)
+{
+  int tempSumLine = SumLineElements(array, i);
+  if (sumLine > tempSumLine)
+  {
+    sumLine = tempSumLine;
+    minSumLine = i;
+  }
+}
+
+Console.WriteLine($"\n{minSumLine+1} - строкa с наименьшей суммой ({sumLine}) элементов ");
+
+
+int SumLineElements(int[,] array, int i)
+{
+  int sumLine = array[i,0];
+  for (int j = 1; j < array.GetLength(1); j++)
+  {
+    sumLine += array[i,j];
+  }
+  return sumLine;
+}
+
+void FillArray(int[,] array){
+    for (int i = 0; i<array.GetLength(0); i++)
+        for (int j = 0; j<array.GetLength(1); j++)
+            array[i,j] = Convert.ToInt32(new Random().Next(-100, 100)) / 10;
+}
+
+void PrintArray(int [,]array){
+    for (int i = 0; i < array.GetLength(0); i++){
+    Console.Write("[ ");
+        for (int j = 0; j < array.GetLength(1); j++)
+        Console.Write(array[i, j] + " ");
+        Console.Write("]");
+        Console.WriteLine("");
+    }
+}

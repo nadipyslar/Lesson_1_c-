@@ -395,6 +395,7 @@ void OrderArrayLines(int[,] array)
 */
 
 //Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов
+/*
 Console.WriteLine("введите количество строк массива");
 int rows = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("введите количество столбцов массива");
@@ -442,3 +443,61 @@ void PrintArray(int [,]array){
         Console.WriteLine("");
     }
 }
+*/
+
+// Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
+
+Console.Write("Введите количество строк 1 массива: ");
+int rowsA = int.Parse(Console.ReadLine());
+Console.Write("Введите количество столбцов 1 массива: ");
+int columnsA = int.Parse(Console.ReadLine());
+Console.Write("Введите количество строк 2 массива: ");
+int rowsB = int.Parse(Console.ReadLine());
+Console.Write("Введите количество столбцов 2 массива: ");
+int columnsB = int.Parse(Console.ReadLine());
+int[,] arrayA = new int[rowsA, columnsA];
+int[,] arrayB = new int[rowsB, columnsB];
+FillArray(arrayA);
+PrintArray(arrayA);
+Console.WriteLine();
+FillArray(arrayB);
+PrintArray(arrayB);
+void FillArray(int[,] array){
+    for (int i = 0; i<array.GetLength(0); i++)
+        for (int j = 0; j<array.GetLength(1); j++)
+            array[i,j] = Convert.ToInt32(new Random().Next(-100, 100)) / 10;
+}
+
+void PrintArray(int [,]array){
+    for (int i = 0; i < array.GetLength(0); i++){
+    Console.Write("[ ");
+        for (int j = 0; j < array.GetLength(1); j++)
+        Console.Write(array[i, j] + " ");
+        Console.Write("]");
+        Console.WriteLine("");
+    }
+}
+
+int[,] resultMatrix = new int[rowsA,columnsB];
+
+MultiplyMatrix(arrayA, arrayB, resultMatrix);
+Console.WriteLine($"\nПроизведение первой и второй матриц:");
+PrintArray(resultMatrix);
+
+void MultiplyMatrix(int[,] firstMartrix, int[,] secomdMartrix, int[,] resultMatrix){
+  for (int i = 0; i < resultMatrix.GetLength(0); i++)
+  {
+    for (int j = 0; j < resultMatrix.GetLength(1); j++)
+    {
+      int sum = 0;
+      for (int k = 0; k < firstMartrix.GetLength(1); k++)
+      {
+        sum += firstMartrix[i,k] * secomdMartrix[k,j];
+      }
+      resultMatrix[i,j] = sum;
+    }
+  }
+}
+
+
+  

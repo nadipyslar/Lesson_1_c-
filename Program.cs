@@ -502,7 +502,7 @@ void MultiplyMatrix(int[,] firstMartrix, int[,] secomdMartrix, int[,] resultMatr
 
 //Сформируйте трёхмерный массив из неповторяющихся двузначных чисел.
 //Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента
-
+/*
 Console.WriteLine("введите X");
 int x = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("введите Y");
@@ -549,6 +549,33 @@ void FillArray(int[,,] array3D){
       }
   }
 }
-
-
+*/
+//Напишите программу, которая заполнит спирально массив 4 на 4
+int n = 4;
+int [,]SquareArray = new int [n,n];
+int temp = 1;
+int i = 0;
+int j = 0;
+while (temp <= SquareArray.GetLength(0) * SquareArray.GetLength(1)){
+    SquareArray[i,j]=temp;
+    temp++;
+    if (i <= j + 1 && i + j < SquareArray.GetLength(1) - 1)
+    j++;
+  else if (i < j && i + j >= SquareArray.GetLength(0) - 1)
+    i++;
+  else if (i >= j && i + j > SquareArray.GetLength(1) - 1)
+    j--;
+  else
+    i--;
+}
+PrintArray(SquareArray);
+void PrintArray(int [,]array){
+    for (int i = 0; i < array.GetLength(0); i++){
+    Console.Write("[ ");
+        for (int j = 0; j < array.GetLength(1); j++)
+        Console.Write(array[i, j] + " ");
+        Console.Write("]");
+        Console.WriteLine("");
+    }
+}
   
